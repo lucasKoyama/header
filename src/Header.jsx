@@ -2,8 +2,9 @@ import { Squash as Hamburger } from 'hamburger-react';
 import PropTypes from 'prop-types';
 import './Header.css';
 import { useEffect, useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.css';
 
-function Header({navBar}) {
+function Header({navBar, color}) {
   const [isHeaderVisible, setHeaderVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
@@ -35,14 +36,18 @@ function Header({navBar}) {
     return result;
   }
 
-  const createNavBar = (li, firstLiClass) => (
+  const createNavBar = (li) => (
     Array.isArray(li[1])
-      ? <li className={ firstLiClass }>
+      ? <li className="sub-menu-name">
           { li[0] }
-          <ul className="drop-down">
+          <i className="fa-solid fa-chevron-right arrow" />
+          <ul
+            className="sub-menu"
+            style={ { backgroundColor: color } }
+          >
             {
               li.map((item, index) => (
-                index === 0 ? false : createNavBar(item, 'drop-down-name')
+                index === 0 ? false : createNavBar(item)
               ))
             }
           </ul>
@@ -51,17 +56,22 @@ function Header({navBar}) {
   );
 
   const navBarItems = convertObjectToArray(navBar)
-    .map((li) => createNavBar(li, 'main-drop-down'));
+    .map((li) => createNavBar(li));
 
   return (
-    <header className={`header ${isHeaderVisible ? 'header-visible' : 'header-hidden'}`}>
+    <header
+      className={`header ${isHeaderVisible ? 'header-visible' : 'header-hidden'}`}
+      style={ { backgroundColor: color } }
+    >
       <div className='logo'>
         <img src="" alt="LOGO" />
       </div>
       <nav>
-        { <ul className="nav-bar"> { navBarItems } </ul> }
+        { <ul className="main-menu"> { navBarItems } </ul> }
       </nav>
-      <Hamburger/>
+      <div className='cellphone-menu'>
+        <Hamburger/>
+      </div>
     </header>
   );
 }

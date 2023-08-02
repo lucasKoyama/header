@@ -7,7 +7,13 @@ function App() {
       <Header
         navBar={
           {
-            'Graduação': 'link',
+            'Graduação': {
+              'Análise de sistemas': 'link',
+              'Sistemas de Informação': 'link',
+              'Ciência de Dados': 'link',
+              'Como funciona': 'link',
+              'Resultados e editais': 'link',
+            },
             'Pós-graduação': 'link',
             'Bootcamps': {
               'Tecnologia': {
@@ -22,6 +28,7 @@ function App() {
             'XP Educação': 'link',
           }
         }
+        color="rgb(65, 65, 65)"
       />
       <h1>TÍTULO</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam pariatur natus nulla maiores in. Ipsam quos, similique harum qui delectus enim eligendi vitae soluta exercitationem, laudantium voluptatibus est iste distinctio?</p>

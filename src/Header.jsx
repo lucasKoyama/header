@@ -46,7 +46,6 @@ function Header({navBar, logoSrc, color}) {
   const createNavBar = (li) => {
     const toggleSubMenu = (event) => {
       if (!desktopWidth) {
-        event.preventDefault();
         const subMenu = event.currentTarget.querySelector('.sub-menu');
         if (subMenu) {
           subMenu.style.display = subMenu.style.display === 'none' ? 'block' : 'none';

@@ -9,17 +9,17 @@ function App() {
         navBar={
           {
             'Graduação': {
-              'Análise de sistemas': 'link',
+              'Análise de sistemas': 'https://portfolio.lucaskoyama.vercel.app/',
               'Sistemas de Informação': 'link',
               'Ciência de Dados': 'link',
               'Como funciona': 'link',
               'Resultados e editais': 'link',
             },
-            'Pós-graduação': 'link',
+            'Pós-graduação': 'https://www.oncet.com.br/',
             'Bootcamps': {
               'Tecnologia': {
-                'Desenvolvimento': { 'Desenvolvedor React': 'link' },
-                'Data Science': 'link',
+                'Desenvolvimento': { 'Desenvolvedor React': 'https://www.oncet.com.br/' },
+                'Data Science': 'https://www.oncet.com.br/',
               },
               'Negócios': { 'Gestão de Projetos': 'link' },
               'Conheça o Multi+': 'link',

@@ -1,4 +1,5 @@
 import Header from './Header'
+import astro from './astronauta2.jpg';
 import './App.css'
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
             'XP Educação': 'link',
           }
         }
-        color="rgb(65, 65, 65)"
+        logoSrc={ astro }
+        color="#282828"
       />
       <h1>TÍTULO</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam pariatur natus nulla maiores in. Ipsam quos, similique harum qui delectus enim eligendi vitae soluta exercitationem, laudantium voluptatibus est iste distinctio?</p>

@@ -1,10 +1,10 @@
+ul {
+  list-style: none;
+}
+
 .header a {
   text-decoration: none;
   color: inherit;
-}
-
-ul {
-  list-style: none;
 }
 
 .header {
@@ -44,6 +44,9 @@ ul {
   z-index: 9999;
   position: absolute;
   right: 20px;
+  border: 2px solid rgba(127, 127, 127, 0.2);
+  border-radius: 10px;
+  padding: 5px;
 }
 
 /* NAVBAR CELL */
@@ -70,6 +73,7 @@ ul {
 .sub-menu li {
   width: 100%;
   display: block;
+  border-left: 2px solid rgba(127, 127, 127, 0.2);
 }
 
 .arrow {

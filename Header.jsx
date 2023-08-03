@@ -1,5 +1,4 @@
 import { Squash as Hamburger } from 'hamburger-react';
-import PropTypes from 'prop-types';
 import './Header.css';
 import { useEffect, useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -82,7 +81,10 @@ function Header({navBar, logoSrc, color}) {
       <div className='logo'>
         <img src={ logoSrc } alt="LOGO" />
       </div>
-      <nav className={desktopWidth ? 'show' : showMenu ? 'show' : 'hide'}>
+      <nav
+        className={desktopWidth ? 'show' : showMenu ? 'show' : 'hide'}
+        style={ { backgroundColor: color } }
+      >
         { <ul className="main-menu"> { navBarItems } </ul> }
       </nav>
       <div className='cellphone-menu'>
@@ -91,9 +93,5 @@ function Header({navBar, logoSrc, color}) {
     </header>
   );
 }
-
-Header.propTypes = ({
-  navBar: PropTypes.array,
-}).isRequired;
 
 export default Header;

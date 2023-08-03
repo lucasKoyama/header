@@ -127,7 +127,7 @@ ul {
     left: 10%;
   }
 
-  .main-menu > .sub-menu-name:hover > .arrow {
+  .main-menu > .sub-menu-name:hover > div > .arrow {
     transform: rotate(90deg);
   }
 }
